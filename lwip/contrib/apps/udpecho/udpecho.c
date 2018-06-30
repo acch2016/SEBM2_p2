@@ -40,6 +40,7 @@
 #include "lwip/sys.h"
 
 uint16_t GlobalBuffer[200];
+SemaphoreHandle_t synchroTaskSemaphore;
 
 //struct netbuf *GlobalBuffer;
 
@@ -72,6 +73,7 @@ static void server_thread(void *arg)
 
 	while (1)
 	{
+		xSemaphoreTake(synchroTaskSemaphore,portMAX_DELAY);
 		netconn_recv(conn, &buf);
 		netbuf_data(buf, (void**)&msg, &len);//CREO NO ES NECESARIA ESTA LINEA
 
@@ -123,6 +125,8 @@ static void server_thread(void *arg)
 void udpecho_init(void)
 {
 
+
+	synchroTaskSemaphore = xSemaphoreCreateBinary();
 	//	sys_thread_new("client", client_thread, NULL, 300, 1);
 	sys_thread_new("server", server_thread, NULL, 300, 2);
 

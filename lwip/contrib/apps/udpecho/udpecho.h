@@ -35,7 +35,10 @@
 #define LWIP_UDPECHO_H
 
 #include "stdint.h"
-//#include "MK64F12.h"
+#include "MK64F12.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
 void udpecho_init(void);
 
 /*******************************************************************************

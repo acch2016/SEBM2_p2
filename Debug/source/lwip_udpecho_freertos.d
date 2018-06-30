@@ -16,15 +16,15 @@ source/lwip_udpecho_freertos.o source/lwip_udpecho_freertos.d: \
  ../amazon-freertos/include/task.h ../amazon-freertos/include/list.h \
  ../amazon-freertos/include/queue.h ../amazon-freertos/include/semphr.h \
  ../amazon-freertos/include/queue.h \
- ../lwip/contrib/apps/udpecho/udpecho.h ../lwip/src/include/lwip/tcpip.h \
- ../lwip/src/include/lwip/err.h ../lwip/src/include/lwip/timeouts.h \
- ../lwip/src/include/lwip/sys.h ../lwip/port/arch/sys_arch.h \
- ../lwip/src/include/lwip/netif.h ../lwip/src/include/lwip/ip_addr.h \
- ../lwip/src/include/lwip/def.h ../lwip/src/include/lwip/ip4_addr.h \
- ../lwip/src/include/lwip/ip6_addr.h ../lwip/src/include/lwip/def.h \
- ../lwip/src/include/lwip/pbuf.h ../lwip/src/include/lwip/stats.h \
- ../lwip/src/include/lwip/mem.h ../lwip/src/include/lwip/memp.h \
- ../lwip/src/include/lwip/priv/memp_std.h \
+ ../lwip/contrib/apps/udpecho/udpecho.h ../CMSIS/MK64F12.h \
+ ../lwip/src/include/lwip/tcpip.h ../lwip/src/include/lwip/err.h \
+ ../lwip/src/include/lwip/timeouts.h ../lwip/src/include/lwip/sys.h \
+ ../lwip/port/arch/sys_arch.h ../lwip/src/include/lwip/netif.h \
+ ../lwip/src/include/lwip/ip_addr.h ../lwip/src/include/lwip/def.h \
+ ../lwip/src/include/lwip/ip4_addr.h ../lwip/src/include/lwip/ip6_addr.h \
+ ../lwip/src/include/lwip/def.h ../lwip/src/include/lwip/pbuf.h \
+ ../lwip/src/include/lwip/stats.h ../lwip/src/include/lwip/mem.h \
+ ../lwip/src/include/lwip/memp.h ../lwip/src/include/lwip/priv/memp_std.h \
  ../lwip/src/include/lwip/priv/memp_priv.h \
  ../lwip/src/include/netif/ethernet.h \
  ../lwip/src/include/lwip/prot/ethernet.h ../lwip/port/ethernetif.h \
@@ -92,6 +92,8 @@ source/lwip_udpecho_freertos.o source/lwip_udpecho_freertos.d: \
 ../amazon-freertos/include/queue.h:
 
 ../lwip/contrib/apps/udpecho/udpecho.h:
+
+../CMSIS/MK64F12.h:
 
 ../lwip/src/include/lwip/tcpip.h:
 
